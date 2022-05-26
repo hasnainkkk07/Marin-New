@@ -36,43 +36,65 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     )
     sys.exit(1)
 
-ENV = bool(os.environ.get('ENV', False))
+ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
-    TOKEN = os.environ.get('TOKEN', None)
-
+    TOKEN = os.environ.get("TOKEN", None)
     try:
-        OWNER_ID = int(os.environ.get('OWNER_ID', None))
+        OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
-        raise Exception("Your OWNER_ID env variable is not a valid integer.")
+        raise Exception("[Raiden] Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get('JOIN_LOGGER', None)
+    MESSAGE_DUMP = os.environ.get("MESSAGE_DUMP", None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
-        ChICHI = set(int(x) for x in os.environ.get("DRAGONS", "").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
+        DEV_USERS = {int(x) for x in os.environ.get("DEV_USERS", "").split()}
     except ValueError:
         raise Exception(
-            "Your sudo or dev users list does not contain valid integers.")
+            "[Raiden] Your dev users list does not contain valid integers."
+        )
 
     try:
-        SENPAI = set(int(x) for x in os.environ.get("DEMONS", "").split())
+        SUPPORT_USERS = {int(x) for x in os.environ.get("SUPPORT_USERS", "").split()}
     except ValueError:
         raise Exception(
-            "Your senpai users list does not contain valid integers.")
+            "[Raiden] Your support users list does not contain valid integers."
+        )
 
     try:
-        SENSEI = set(int(x) for x in os.environ.get("WOLVES", "").split())
+        WHITELIST_USERS = {
+            int(x) for x in os.environ.get("WHITELIST_USERS", "").split()
+        }
     except ValueError:
         raise Exception(
-            "Your sensei users list does not contain valid integers.")
+            "[Raiden] Your whitelisted users list does not contain valid integers."
+        )
+    try:
+        DEMONS = {
+            int(x) for x in os.environ.get("DEMONS", "").split()
+        }
+    except ValueError:
+        raise Exception(
+            "[Raiden] Your demon users list does not contain valid integers."
+        )
 
     try:
-        TOMODACHI = set(int(x) for x in os.environ.get("TIGERS", "").split())
+        WHITELIST_CHATS = {
+            int(x) for x in os.environ.get("WHITELIST_CHATS", "").split()
+        }
     except ValueError:
         raise Exception(
-            "Your tiger users list does not contain valid integers.")
+            "[Raiden] Your whitelisted chats list does not contain valid integers."
+        )
+    try:
+        BLACKLIST_CHATS = {
+            int(x) for x in os.environ.get("BLACKLIST_CHATS", "").split()
+        }
+    except ValueError:
+        raise Exception(
+            "[Raiden] Your blacklisted chats list does not contain valid integers."
+        )
 
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
