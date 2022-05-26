@@ -15,7 +15,7 @@ if is_module_loaded(FILENAME):
 
     from Raiden import MESSAGE_DUMP, LOGGER, dispatcher
     from Raiden.modules.helper_funcs.chat_status import user_admin
-    from Riden.modules.sql import log_channel_sql as sql
+    from Raiden.modules.sql import log_channel_sql as sql
 
     def loggable(func):
         @wraps(func)
