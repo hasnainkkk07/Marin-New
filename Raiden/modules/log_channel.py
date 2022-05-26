@@ -13,7 +13,7 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, JobQueue, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from Raiden import EVENT_LOGS, LOGGER, dispatcher
+    from Raiden import MESSAGE_DUMP, LOGGER, dispatcher
     from Raiden.modules.helper_funcs.chat_status import user_admin
     from Riden.modules.sql import log_channel_sql as sql
 
