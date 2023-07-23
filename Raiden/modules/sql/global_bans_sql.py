@@ -1,8 +1,7 @@
-
 import threading
 
-from sqlalchemy import Column, UnicodeText, String, Boolean
-from sqlalchemy.sql.sqltypes import BigInteger
+from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText
+
 from Raiden.modules.sql import BASE, SESSION
 
 
