@@ -40,22 +40,22 @@
     "API_ID": {
       "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
       "required": true,
-      "value": "17868017"
+      "value": "24683098"
     },
     "API_HASH": {
       "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
       "required": true,
-      "value": "d1621fd9baa388087ea385200d977b72"
+      "value": "e4055cd239464e50e69bd73057c05dd3"
     },
     "SQLALCHEMY_DATABASE_URL": {
       "description": "Your postgres sql db, empty this field if you dont have one.ex: sqldbtype://username:pw@hostname:port/db_name",
       "required": false,
-      "value": ""
+      "value": "postgres://jrjcokem:VlG00PuZj0IgXZfc5dKrP2njj1DIHIWM@isabelle.db.elephantsql.com/jrjcokem"
     },
     "OWNER_ID": {
       "description": "Your user ID as an integer.",
       "required": true,
-      "value": "1802324609"
+      "value": "6346273488"
     },
     "HEROKU_API_KEY": {
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -67,11 +67,11 @@
     },
     "OWNER_USERNAME": {
       "description": "Your username without the @",
-      "value": "XultiM8"
+      "value": "hasnainkk"
     },
     "DB_URL": {
       "description": "your database url",
-      "value": "cyrus"
+      "value": "mongodb+srv://herobh123456:hasnainkk07@hasnainkk07.uqjekii.mongodb.net/?retryWrites=true&w=majority"
     },
     "ARQ_API_URL": {
       "description": "leave it just like it is.",
@@ -84,7 +84,7 @@
     "SUPPORT_CHAT": {
       "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to zeldris support than consider you made an enemy.",
       "required": true,
-      "value": "MarinSupport"
+      "value": "ANIME_FOREST_07"
     },
     "MESSAGE_DUMP": {
       "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -104,7 +104,7 @@
     "MONGO_DB_URI": {
       "description": "MONGO DB URI from mongo",
       "required": true,
-      "value": "mongodb+srv://Sawada-Tsunayoshi: sawada@cluster0.ox8wd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+      "value": "mongodb+srv://herobh123456:hasnainkk07@hasnainkk07.uqjekii.mongodb.net/?retryWrites=true&w=majority"
     },
 
     "WHITELIST_USERS": {
@@ -162,7 +162,7 @@
     "DONATION_LINK": {
       "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
       "required": false,
-      "value": "https://t.me/XultiM8"
+      "value": "https://t.me/hasnainkk"
     },
     "DEL_CMDS": {
       "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
